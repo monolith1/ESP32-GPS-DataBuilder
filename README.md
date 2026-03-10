@@ -16,10 +16,17 @@ A critical challenge in this build was the **GPIO 10 (D10) Conflict**. On the XI
 * `/ESP32_GPS_DATABUILDER.ino`: Main firmware.
 
 ## Pinouts
-| Component | Pin | Function |
-| :--- | :--- | :--- |
-| GPS | D1/D0 | Hardware Serial |
-| OLED | D4/D5 | I2C |
-| SD Card | D2/D8/D9/D3 | Remapped SPI |
-| Encoder| D7/D6/D10 | Menu Control |
+| Component | Pin Label | ESP32-C3 Pin | GPIO | Function |
+| :--- | :--- | :--- | :--- | :--- |
+| **GPS Module** | TX | **D0** | 2 | UART Data Out |
+| **GPS Module** | RX | **D1** | 3 | UART Data In |
+| **SD Card** | CS | **D2** | 4 | SPI Chip Select |
+| **SD Card** | MOSI | **D3** | 5 | **Remapped SPI Data** |
+| **OLED Screen** | SDA | **D4** | 6 | I2C Data |
+| **OLED Screen** | SCL | **D5** | 7 | I2C Clock |
+| **Encoder** | DT | **D6** | 21 | Rotation Data |
+| **Encoder** | CLK | **D7** | 20 | Rotation Clock |
+| **SD Card** | SCK | **D8** | 8 | SPI Clock |
+| **SD Card** | MISO | **D9** | 9 | SPI Data Out |
+| **Encoder SW** | SW | **D10** | 10 | **Menu Button** |
 
